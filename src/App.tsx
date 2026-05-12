@@ -178,7 +178,7 @@ export default function App() {
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
               <p>
                 O <strong>Centro Cultural e Social Casa de Seu Zé</strong> é uma organização da
-                sociedade civil localizada em Ceilândia, no Distrito Federal (SHSN CH 204, CEP
+                sociedade civil localizada em Ceilândia, no Distrito Federal (SHSN CH 204 CJ 1 CASA 10 CEP
                 72.236-800). Nascida da força da comunidade, acolhe, forma e fortalece culturalmente
                 as famílias da região.
               </p>
