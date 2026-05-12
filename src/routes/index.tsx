@@ -8,7 +8,6 @@ import {
   MessageCircle,
   Heart,
   Users,
-  Home as HomeIcon,
 } from "lucide-react";
 import fachada from "@/assets/casa/fachada-BWDSsk2z.png";
 import g1 from "@/assets/casa/g1-CAW1w70p.png";
