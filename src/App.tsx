@@ -38,7 +38,7 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2 text-xs">
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-2">
-              <MapPin className="h-3.5 w-3.5 text-[var(--accent)]" /> SHSN CH 204 — Ceilândia, DF
+              <MapPin className="h-3.5 w-3.5 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10 — Ceilândia,  DF
             </span>
             <span className="flex items-center gap-2">
               <Phone className="h-3.5 w-3.5 text-[var(--accent)]" /> (61) 99373-2273
@@ -395,7 +395,7 @@ export default function App() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-white/85">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-[var(--accent)]" /> SHSN CH 204 — Ceilândia,
+                <MapPin className="mt-0.5 h-4 w-4 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10 — Ceilândia,
                 DF · CEP 72.236-800
               </li>
               <li className="flex items-center gap-2">
