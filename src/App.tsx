@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import {
   MapPin,
   Phone,
@@ -18,26 +17,6 @@ import g5 from "@/assets/casa/g5-yXjhplyL.png";
 import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Casa de Seu Zé — Centro Cultural e Social | Ceilândia, DF" },
-      {
-        name: "description",
-        content:
-          "OSC comunitária em Ceilândia–DF. Cursos profissionalizantes gratuitos, ações culturais e apoio social para famílias.",
-      },
-      { property: "og:title", content: "Casa de Seu Zé — Centro Cultural e Social" },
-      {
-        property: "og:description",
-        content:
-          "Há mais de uma década transformando vidas através da educação e cultura em Ceilândia–DF.",
-      },
-    ],
-  }),
-  component: Index,
-});
-
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
@@ -51,7 +30,7 @@ const navLinks = [
   { href: "#contato", label: "Contato" },
 ];
 
-function Index() {
+export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground scroll-smooth">
       {/* Top bar */}
@@ -443,8 +422,7 @@ function Index() {
           </div>
         </div>
         <div className="mx-auto mt-12 max-w-6xl border-t border-white/15 px-6 pt-6 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} Centro Cultural e Social Casa de Seu Zé. Todos os direitos
-          reservados.
+          © {new Date().getFullYear()} Centro Cultural e Social Casa de Seu Zé. Todos os direitos reservados.
         </div>
       </footer>
 
