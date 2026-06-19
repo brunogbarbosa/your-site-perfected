@@ -7,6 +7,11 @@ import {
   MessageCircle,
   Heart,
   Users,
+  FileText,
+  Building2,
+  Handshake,
+  ClipboardList,
+  Download,
 } from "lucide-react";
 import fachada from "@/assets/casa/fachada-BWDSsk2z.png";
 import g1 from "@/assets/casa/g1-CAW1w70p.png";
