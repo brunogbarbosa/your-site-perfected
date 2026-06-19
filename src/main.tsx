@@ -1,10 +1,17 @@
-import { StrictMode } from "react";
+import { StrictMode, type ComponentType } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import ProjectDetailPage from "./ProjectDetailPage";
 import ProjectsPage from "./ProjectsPage";
 import "./styles.css";
 
-const Page = window.location.pathname === "/projetos-sociais" ? ProjectsPage : App;
+const pages: Record<string, ComponentType> = {
+  "/projetos-sociais": ProjectsPage,
+  "/brilho-da-esmeralda": () => <ProjectDetailPage project="esmeralda" />,
+  "/brilho-do-sol": () => <ProjectDetailPage project="sol" />,
+};
+
+const Page = pages[window.location.pathname] ?? App;
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

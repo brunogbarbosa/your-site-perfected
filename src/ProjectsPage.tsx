@@ -9,8 +9,6 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
-import g3 from "@/assets/casa/g3-DaIPNvfT.png";
-import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 
 const WHATSAPP =
@@ -19,8 +17,8 @@ const WHATSAPP =
 const projects = [
   {
     title: "Brilho da Esmeralda",
-    image: g4,
-    imageAlt: "Atividade de corte e costura da Casa de Seu Zé",
+    image: "/logo-brilho-da-esmeralda.png",
+    imageAlt: "Logo do projeto O Brilho da Esmeralda",
     status: "Em execução",
     objective:
       "Implantação e desenvolvimento do Projeto Brilho da Esmeralda, por meio da realização de cursos de corte e costura.",
@@ -28,22 +26,22 @@ const projects = [
     partner: "Ministério das Mulheres",
     value: "R$ 100.000,00",
     duration: "6 meses",
-    href: "/termo-de-fomento-995692-2026.pdf",
-    action: "Ver projeto e documentos",
+    href: "/brilho-da-esmeralda",
+    action: "Ver mais",
   },
   {
     title: "O Brilho do Sol",
-    image: g3,
-    imageAlt: "Ação comunitária da Casa de Seu Zé",
-    status: "Informações em atualização",
+    image: "/logo-brilho-do-sol.png",
+    imageAlt: "Logo do projeto Brilho do Sol",
+    status: "Executado",
     objective:
-      "Projeto social da Casa de Seu Zé. Os objetivos, documentos e dados de execução serão publicados nesta página.",
-    term: null,
-    partner: null,
-    value: null,
-    duration: null,
-    href: null,
-    action: "Documentação em breve",
+      "Promover desenvolvimento socioeconômico, segurança alimentar e capacitação para mulheres e crianças de comunidades do Distrito Federal e Goiás.",
+    term: "Termo de Fomento nº 949053/2023",
+    partner: "Ministério das Mulheres",
+    value: "R$ 1.000.000,00",
+    duration: "abril a dezembro de 2024",
+    href: "/brilho-do-sol",
+    action: "Ver mais",
   },
 ];
 
@@ -163,11 +161,11 @@ export default function ProjectsPage() {
                   key={project.title}
                   className="group overflow-hidden rounded-[2rem] border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-white p-7 md:p-10">
                     <img
                       src={project.image}
                       alt={project.imageAlt}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
                     />
                     <span className="absolute left-5 top-5 rounded-full bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[var(--brand-dark-red)] shadow-md">
                       {project.status}
@@ -198,11 +196,7 @@ export default function ProjectsPage() {
                           </span>
                         </div>
                       </div>
-                    ) : (
-                      <div className="mt-6 rounded-2xl bg-secondary p-5 text-sm text-foreground/65">
-                        A documentação deste projeto será adicionada assim que estiver disponível.
-                      </div>
-                    )}
+                    ) : null}
 
                     {project.href ? (
                       <a
@@ -213,11 +207,7 @@ export default function ProjectsPage() {
                       >
                         {project.action} <ArrowRight className="h-4 w-4" />
                       </a>
-                    ) : (
-                      <span className="mt-7 inline-flex cursor-not-allowed items-center gap-2 rounded-full border-2 border-foreground/20 px-6 py-3 text-sm font-bold text-foreground/40">
-                        {project.action}
-                      </span>
-                    )}
+                    ) : null}
                   </div>
                 </article>
               ))}
