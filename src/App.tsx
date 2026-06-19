@@ -21,6 +21,7 @@ import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import g5 from "@/assets/casa/g5-yXjhplyL.png";
 import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
+import ministerioMulheres from "@/assets/ministerio-mulheres.png.asset.json";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
