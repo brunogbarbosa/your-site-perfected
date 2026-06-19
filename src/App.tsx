@@ -375,7 +375,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
             {/* Bloco 1 — Identificação */}
             <div className="rounded-2xl border bg-card p-6 shadow-sm">
               <div className="flex items-center gap-2 text-[var(--accent)]">
@@ -448,23 +448,6 @@ export default function App() {
                 Os dirigentes não recebem remuneração da entidade por suas funções diretivas, em
                 conformidade com o estatuto social.
               </p>
-            </div>
-
-            {/* Bloco 3 — Estatuto Social */}
-            <div className="rounded-2xl border bg-card p-6 shadow-sm">
-              <div className="flex items-center gap-2 text-[var(--accent)]">
-                <FileText className="h-5 w-5" />
-                <h3 className="text-sm font-bold uppercase tracking-wider">Estatuto Social</h3>
-              </div>
-              <p className="mt-5 text-sm leading-relaxed text-foreground/80">
-                Documento constitutivo da entidade, conforme registro em cartório.
-              </p>
-              <a
-                href="#"
-                className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-white"
-              >
-                <Download className="h-4 w-4" /> Baixar Estatuto Social
-              </a>
             </div>
           </div>
 
