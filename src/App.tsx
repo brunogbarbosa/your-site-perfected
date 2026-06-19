@@ -356,22 +356,205 @@ export default function App() {
 
       {/* Transparência */}
       <section id="transparencia" className="bg-secondary py-20">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
-            Confiança
-          </span>
-          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Transparência</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-foreground/75">
-            Acreditamos que a confiança da comunidade se constrói com clareza. Em breve
-            disponibilizaremos aqui nossos relatórios anuais, prestação de contas e documentos
-            institucionais.
-          </p>
-          <a
-            href="#contato"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-md transition hover:opacity-90"
-          >
-            Solicitar informações <ArrowRight className="h-4 w-4" />
-          </a>
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+              Confiança
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Transparência</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-foreground/75">
+              A confiança da comunidade se constrói com clareza. Aqui você encontra nossas
+              informações institucionais e dados da parceria vigente com o Governo Federal.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {/* Bloco 1 — Identificação */}
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="flex items-center gap-2 text-[var(--accent)]">
+                <Building2 className="h-5 w-5" />
+                <h3 className="text-sm font-bold uppercase tracking-wider">
+                  Identificação da Entidade
+                </h3>
+              </div>
+              <dl className="mt-5 space-y-3 text-sm text-foreground/80">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Razão Social
+                  </dt>
+                  <dd>Centro Cultural e Social Casa de Seu Zé</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    CNPJ
+                  </dt>
+                  <dd>18.181.775/0001-76</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Endereço
+                  </dt>
+                  <dd>SHSN CH 204, Conj I, Lote 10 — CEP: 72236-680 — Ceilândia, DF</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Instagram
+                  </dt>
+                  <dd>@casadeseuze</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Telefone
+                  </dt>
+                  <dd>(61) 99373-2273</dd>
+                </div>
+              </dl>
+            </div>
+
+            {/* Bloco 2 — Dirigentes */}
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="flex items-center gap-2 text-[var(--accent)]">
+                <Users className="h-5 w-5" />
+                <h3 className="text-sm font-bold uppercase tracking-wider">
+                  Composição da Diretoria
+                </h3>
+              </div>
+              <div className="mt-5 overflow-hidden rounded-xl border">
+                <table className="w-full text-sm">
+                  <thead className="bg-[var(--accent)]/10 text-left text-xs font-semibold uppercase tracking-wider text-foreground/80">
+                    <tr>
+                      <th className="px-4 py-3">Nome</th>
+                      <th className="px-4 py-3">Cargo</th>
+                      <th className="px-4 py-3">Remuneração</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-foreground/80">
+                    <tr className="border-t">
+                      <td className="px-4 py-3">Lindaci Alexandre Pereira</td>
+                      <td className="px-4 py-3">Presidente</td>
+                      <td className="px-4 py-3">Não remunerada</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-xs italic text-foreground/60">
+                Os dirigentes não recebem remuneração da entidade por suas funções diretivas, em
+                conformidade com o estatuto social.
+              </p>
+            </div>
+
+            {/* Bloco 3 — Estatuto Social */}
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="flex items-center gap-2 text-[var(--accent)]">
+                <FileText className="h-5 w-5" />
+                <h3 className="text-sm font-bold uppercase tracking-wider">Estatuto Social</h3>
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-foreground/80">
+                Documento constitutivo da entidade, conforme registro em cartório.
+              </p>
+              <a
+                href="#"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-white"
+              >
+                <Download className="h-4 w-4" /> Baixar Estatuto Social
+              </a>
+            </div>
+          </div>
+
+          {/* Bloco 4 — Parceria Federal (destaque) */}
+          <div className="mt-6 rounded-2xl border-2 border-[var(--accent)] bg-[var(--accent)]/5 p-6 md:p-8">
+            <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
+              <div className="shrink-0">
+                <img
+                  src="https://www.gov.br/mulheres/pt-br/++theme++padrao_govbr/img/logo-mulheres.svg"
+                  alt="Ministério das Mulheres"
+                  className="h-16 w-auto object-contain md:h-20"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <p className="text-sm font-bold text-[var(--brand-dark-red)]">
+                  Ministério das Mulheres
+                </p>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 text-[var(--accent)]">
+                  <Handshake className="h-5 w-5" />
+                  <h3 className="text-sm font-bold uppercase tracking-wider">
+                    Parceria Federal — Projeto Brilho da Esmeralda
+                  </h3>
+                </div>
+                <dl className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Instrumento
+                    </dt>
+                    <dd>Termo de Fomento nº 995692/2026</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Concedente
+                    </dt>
+                    <dd>Ministério das Mulheres — Secretaria Nacional de Autonomia Econômica</dd>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Objeto
+                    </dt>
+                    <dd>
+                      Implantação e Desenvolvimento do Projeto Brilho da Esmeralda — cursos gratuitos
+                      de corte e costura para mulheres da comunidade
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Valor total
+                    </dt>
+                    <dd>R$ 100.000,00</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Vigência
+                    </dt>
+                    <dd>6 meses — assinado em 17/06/2026</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Processo SEI
+                    </dt>
+                    <dd>21260.000911/2026-93</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Emenda Parlamentar nº
+                    </dt>
+                    <dd>28260003</dd>
+                  </div>
+                </dl>
+                <a
+                  href="#"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
+                >
+                  <FileText className="h-4 w-4" /> Ver Termo de Fomento completo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bloco 5 — Relatórios */}
+          <div className="mx-auto mt-6 max-w-3xl rounded-2xl border bg-card p-6 text-center shadow-sm">
+            <div className="flex items-center justify-center gap-2 text-[var(--accent)]">
+              <ClipboardList className="h-5 w-5" />
+              <h3 className="text-sm font-bold uppercase tracking-wider">Relatórios de Execução</h3>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
+              Os relatórios parciais e final de execução do objeto e financeiro serão publicados aqui
+              conforme apresentados ao Ministério das Mulheres na plataforma Transferegov.br.
+            </p>
+            <p className="mt-3 text-xs italic text-foreground/60">
+              Próxima entrega prevista: ao fim da vigência do Termo de Fomento (dezembro/2026).
+            </p>
+          </div>
         </div>
       </section>
 
