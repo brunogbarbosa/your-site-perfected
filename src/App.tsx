@@ -21,6 +21,7 @@ import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import g5 from "@/assets/casa/g5-yXjhplyL.png";
 import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
+import MobileNav from "@/components/MobileNav";
 
 const MINISTERIO_MULHERES_LOGO = "/ministerio-das-mulheres.png";
 const TERMO_FOMENTO_PDF = "/termo-de-fomento-995692-2026.pdf";
@@ -86,14 +87,19 @@ export default function App() {
               </a>
             ))}
           </nav>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:brightness-110"
-          >
-            <MessageCircle className="h-4 w-4" /> WhatsApp
-          </a>
+          <div className="flex items-center gap-2">
+            <MobileNav links={navLinks} />
+            <a
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-[var(--accent)] px-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110 sm:px-5"
+            >
+              <MessageCircle className="h-4 w-4" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+          </div>
         </div>
       </header>
 
