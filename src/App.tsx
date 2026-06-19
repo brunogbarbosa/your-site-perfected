@@ -21,7 +21,9 @@ import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import g5 from "@/assets/casa/g5-yXjhplyL.png";
 import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
-import ministerioMulheres from "@/assets/ministerio-mulheres.png.asset.json";
+
+const MINISTERIO_MULHERES_LOGO = "/ministerio-das-mulheres.png";
+const TERMO_FOMENTO_PDF = "/termo-de-fomento-995692-2026.pdf";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -44,7 +46,8 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2 text-xs">
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-2">
-              <MapPin className="h-3.5 w-3.5 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10 — Ceilândia,  DF
+              <MapPin className="h-3.5 w-3.5 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10 —
+              Ceilândia, DF
             </span>
             <span className="flex items-center gap-2">
               <Phone className="h-3.5 w-3.5 text-[var(--accent)]" /> (61) 99373-2273
@@ -94,15 +97,12 @@ export default function App() {
       </header>
 
       {/* Banner Parceria Federal */}
-      <div
-        className="border-b border-[#e0d9d0]"
-        style={{ backgroundColor: "#F9F6F0" }}
-      >
+      <div className="border-b border-[#e0d9d0]" style={{ backgroundColor: "#F9F6F0" }}>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-6 py-3 md:flex-row md:gap-5">
           {/* Logo / Fallback */}
           <div className="flex shrink-0 items-center justify-center">
             <img
-              src={ministerioMulheres.url}
+              src={MINISTERIO_MULHERES_LOGO}
               alt="Ministério das Mulheres"
               height={40}
               className="h-10 w-auto"
@@ -115,8 +115,8 @@ export default function App() {
           {/* Texto */}
           <p className="text-center text-sm leading-snug md:text-left" style={{ color: "#1a1a1a" }}>
             <strong>Projeto Brilho da Esmeralda</strong> — realizado com recursos do Ministério das
-            Mulheres por meio do Termo de Fomento nº 995692/2026, decorrente de Emenda
-            Parlamentar nº 28260003.
+            Mulheres por meio do Termo de Fomento nº 995692/2026, decorrente de Emenda Parlamentar
+            nº 28260003.
           </p>
 
           {/* Badge */}
@@ -177,7 +177,9 @@ export default function App() {
               { v: "100%", l: "comunitária" },
             ].map((s) => (
               <div key={s.l} className="text-center">
-                <div className="text-3xl font-extrabold text-[var(--accent)] md:text-4xl">{s.v}</div>
+                <div className="text-3xl font-extrabold text-[var(--accent)] md:text-4xl">
+                  {s.v}
+                </div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/70">{s.l}</div>
               </div>
             ))}
@@ -217,9 +219,9 @@ export default function App() {
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
               <p>
                 O <strong>Centro Cultural e Social Casa de Seu Zé</strong> é uma organização da
-                sociedade civil localizada em Ceilândia, no Distrito Federal (SHSN CH 204 CJ 1 CASA 10 CEP
-                72.236-800). Nascida da força da comunidade, acolhe, forma e fortalece culturalmente
-                as famílias da região.
+                sociedade civil localizada em Ceilândia, no Distrito Federal (SHSN CH 204 CJ 1 CASA
+                10 CEP 72.236-680). Nascida da força da comunidade, acolhe, forma e fortalece
+                culturalmente as famílias da região.
               </p>
               <p>
                 Promovemos cursos gratuitos de corte e costura, estética, beleza, artesanato,
@@ -500,7 +502,7 @@ export default function App() {
             <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
               <div className="shrink-0">
                 <img
-                  src="https://www.gov.br/mulheres/pt-br/++theme++padrao_govbr/img/logo-mulheres.svg"
+                  src={MINISTERIO_MULHERES_LOGO}
                   alt="Ministério das Mulheres"
                   className="h-16 w-auto object-contain md:h-20"
                   onError={(e) => {
@@ -536,8 +538,8 @@ export default function App() {
                       Objeto
                     </dt>
                     <dd>
-                      Implantação e Desenvolvimento do Projeto Brilho da Esmeralda — cursos gratuitos
-                      de corte e costura para mulheres da comunidade
+                      Implantação e Desenvolvimento do Projeto Brilho da Esmeralda — cursos
+                      gratuitos de corte e costura para mulheres da comunidade
                     </dd>
                   </div>
                   <div>
@@ -564,14 +566,113 @@ export default function App() {
                     </dt>
                     <dd>28260003</dd>
                   </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Documento SEI
+                    </dt>
+                    <dd>62122718</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Representante da OSC
+                    </dt>
+                    <dd>Lindaci Alexandre Pereira — Presidente</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Representante do Ministério
+                    </dt>
+                    <dd>Joana Célia dos Passos — Secretária Nacional de Autonomia Econômica</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Liberação dos recursos
+                    </dt>
+                    <dd>Parcela única</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Ação orçamentária
+                    </dt>
+                    <dd>21GG — PTRES 262853 — Elemento 33.50.41</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Nota de empenho
+                    </dt>
+                    <dd>2026NE000050 — Fonte 1000000000</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Autenticidade
+                    </dt>
+                    <dd>Código verificador 62122718 — CRC F123FFB7</dd>
+                  </div>
                 </dl>
                 <a
-                  href="#"
+                  href={TERMO_FOMENTO_PDF}
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
                 >
                   <FileText className="h-4 w-4" /> Ver Termo de Fomento completo
                 </a>
               </div>
+            </div>
+          </div>
+
+          {/* Documento integral — todas as 21 páginas e 22 cláusulas */}
+          <div className="mt-6 overflow-hidden rounded-2xl border bg-card shadow-sm">
+            <div className="flex flex-col gap-4 border-b p-6 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-[var(--accent)]">
+                  <FileText className="h-5 w-5" />
+                  <h3 className="text-sm font-bold uppercase tracking-wider">
+                    Termo de Fomento integral
+                  </h3>
+                </div>
+                <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground/75">
+                  Consulte abaixo as 21 páginas do documento oficial, incluindo as 22 cláusulas,
+                  obrigações das partes, monitoramento, prestação de contas, sanções, assinaturas e
+                  dados de autenticação.
+                </p>
+              </div>
+              <a
+                href={TERMO_FOMENTO_PDF}
+                download
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-white"
+              >
+                <Download className="h-4 w-4" /> Baixar PDF
+              </a>
+            </div>
+            <object
+              data={TERMO_FOMENTO_PDF}
+              type="application/pdf"
+              aria-label="Termo de Fomento nº 995692/2026 completo"
+              className="hidden h-[780px] w-full md:block"
+            >
+              <p className="p-6 text-sm">
+                Seu navegador não exibiu o PDF.{" "}
+                <a
+                  href={TERMO_FOMENTO_PDF}
+                  className="font-semibold text-[var(--accent)] underline"
+                >
+                  Abra o documento completo.
+                </a>
+              </p>
+            </object>
+            <div className="p-6 text-center md:hidden">
+              <p className="text-sm text-foreground/70">
+                Em celulares, abra o documento em uma nova aba para consultar todas as páginas.
+              </p>
+              <a
+                href={TERMO_FOMENTO_PDF}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white"
+              >
+                <FileText className="h-4 w-4" /> Abrir documento completo
+              </a>
             </div>
           </div>
 
@@ -582,8 +683,8 @@ export default function App() {
               <h3 className="text-sm font-bold uppercase tracking-wider">Relatórios de Execução</h3>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-              Os relatórios parciais e final de execução do objeto e financeiro serão publicados aqui
-              conforme apresentados ao Ministério das Mulheres na plataforma Transferegov.br.
+              Os relatórios parciais e final de execução do objeto e financeiro serão publicados
+              aqui conforme apresentados ao Ministério das Mulheres na plataforma Transferegov.br.
             </p>
             <p className="mt-3 text-xs italic text-foreground/60">
               Próxima entrega prevista: ao fim da vigência do Termo de Fomento (dezembro/2026).
@@ -617,8 +718,8 @@ export default function App() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-white/85">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10 — Ceilândia,
-                DF · CEP 72.236-800
+                <MapPin className="mt-0.5 h-4 w-4 text-[var(--accent)]" /> SHSN CH 204 CJ 1 Casa 10
+                — Ceilândia, DF · CEP 72.236-680
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-[var(--accent)]" /> (61) 99373-2273
@@ -644,7 +745,8 @@ export default function App() {
           </div>
         </div>
         <div className="mx-auto mt-12 max-w-6xl border-t border-white/15 px-6 pt-6 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} Centro Cultural e Social Casa de Seu Zé. Todos os direitos reservados.
+          © {new Date().getFullYear()} Centro Cultural e Social Casa de Seu Zé. Todos os direitos
+          reservados.
         </div>
       </footer>
 
