@@ -194,7 +194,7 @@ export default function ProjectsPage() {
                   key={project.title}
                   className="group overflow-hidden rounded-[2rem] border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-white p-2 md:p-4">
+                  <div className="relative aspect-square overflow-hidden bg-white p-0 md:p-2">
                     <img
                       src={project.image}
                       alt={project.imageAlt}

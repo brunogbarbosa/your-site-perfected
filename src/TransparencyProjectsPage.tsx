@@ -214,16 +214,16 @@ export default function TransparencyProjectsPage() {
                 className="overflow-hidden rounded-[2rem] border bg-card shadow-sm"
               >
                 <div className="grid lg:grid-cols-[0.72fr,1.28fr]">
-                  <div className="flex flex-col justify-between bg-secondary p-7 md:p-10">
+                  <div className="flex flex-col justify-between bg-secondary p-4 md:p-10">
                     <div>
                       <span className="inline-flex rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white">
                         {project.status}
                       </span>
-                      <div className="mt-7 rounded-2xl bg-white p-2 shadow-sm md:p-3">
+                      <div className="mt-7 rounded-2xl bg-white p-0 shadow-sm md:p-2">
                         <img
                           src={project.logo}
                           alt={project.logoAlt}
-                          className="mx-auto max-h-80 w-full object-contain"
+                          className="mx-auto max-h-96 w-full object-contain"
                         />
                       </div>
                     </div>
