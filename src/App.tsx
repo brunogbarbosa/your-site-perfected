@@ -98,14 +98,14 @@ export default function App() {
 
       {/* Banner Parceria Federal */}
       <div className="border-b border-[#e0d9d0]" style={{ backgroundColor: "#F9F6F0" }}>
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-6 py-3 md:flex-row md:gap-5">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-6 py-4 md:flex-row md:gap-6">
           {/* Logo / Fallback */}
           <div className="flex shrink-0 items-center justify-center">
             <img
               src={MINISTERIO_MULHERES_LOGO}
               alt="Ministério das Mulheres"
-              height={40}
-              className="h-10 w-auto"
+              height={80}
+              className="h-16 w-auto md:h-20"
             />
           </div>
 
