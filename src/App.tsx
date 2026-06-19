@@ -21,6 +21,7 @@ import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import g5 from "@/assets/casa/g5-yXjhplyL.png";
 import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
+import ministerioMulheres from "@/assets/ministerio-mulheres.png.asset.json";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -101,19 +102,11 @@ export default function App() {
           {/* Logo / Fallback */}
           <div className="flex shrink-0 items-center justify-center">
             <img
-              src="https://www.gov.br/mulheres/pt-br/++theme++padrao_govbr/img/logo-mulheres.svg"
+              src={ministerioMulheres.url}
               alt="Ministério das Mulheres"
               height={40}
-              className="hidden h-10 md:block"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-                const fallback = e.currentTarget.parentElement?.querySelector(".fallback-text");
-                if (fallback) fallback.classList.remove("hidden");
-              }}
+              className="h-10 w-auto"
             />
-            <span className="fallback-text hidden text-sm font-bold" style={{ color: "#1a1a1a" }}>
-              Ministério das Mulheres
-            </span>
           </div>
 
           {/* Divisor */}
