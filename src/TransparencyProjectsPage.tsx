@@ -219,11 +219,11 @@ export default function TransparencyProjectsPage() {
                       <span className="inline-flex rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white">
                         {project.status}
                       </span>
-                      <div className="mt-7 rounded-2xl bg-white p-6 shadow-sm">
+                      <div className="mt-7 rounded-2xl bg-white p-2 shadow-sm md:p-3">
                         <img
                           src={project.logo}
                           alt={project.logoAlt}
-                          className="mx-auto max-h-64 w-full object-contain"
+                          className="mx-auto max-h-80 w-full object-contain"
                         />
                       </div>
                     </div>
