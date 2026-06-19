@@ -70,8 +70,8 @@ export default function App() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[var(--brand-dark-red)] text-white shadow-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
           <a href="#inicio" className="flex items-center gap-3">
-            <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-white">
-              <img src={logo} alt="" className="h-14 w-14 object-contain" />
+            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+              <img src={logo} alt="" className="h-full w-full object-cover" />
             </span>
             <span className="leading-tight">
               <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
@@ -662,8 +662,8 @@ export default function App() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-white">
-                <img src={logo} alt="" className="h-14 w-14 object-contain" />
+              <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+                <img src={logo} alt="" className="h-full w-full object-cover" />
               </span>
               <div className="leading-tight">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">

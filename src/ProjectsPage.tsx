@@ -78,8 +78,8 @@ export default function ProjectsPage() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[var(--brand-dark-red)] text-white shadow-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
           <a href="/" className="flex items-center gap-3">
-            <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-white">
-              <img src={logo} alt="" className="h-14 w-14 object-contain" />
+            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+              <img src={logo} alt="" className="h-full w-full object-cover" />
             </span>
             <span className="leading-tight">
               <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
@@ -225,8 +225,8 @@ export default function ProjectsPage() {
       <footer className="bg-[var(--brand-dark-red)] py-12 text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
-            <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-white">
-              <img src={logo} alt="" className="h-14 w-14 object-contain" />
+            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full bg-white">
+              <img src={logo} alt="" className="h-full w-full object-cover" />
             </span>
             <div>
               <div className="font-extrabold">CASA DE SEU ZÉ</div>
