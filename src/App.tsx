@@ -371,7 +371,7 @@ export default function App() {
             <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Transparência</h2>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/75">
               A confiança da comunidade se constrói com clareza. Aqui você encontra nossas
-              informações institucionais e dados da parceria vigente com o Governo Federal.
+              informações institucionais, documentos e dados da entidade.
             </p>
           </div>
 
@@ -468,198 +468,202 @@ export default function App() {
             </div>
           </div>
 
-          {/* Bloco 4 — Parceria Federal (destaque) */}
-          <div className="mt-6 rounded-2xl border-2 border-[var(--accent)] bg-[var(--accent)]/5 p-6 md:p-8">
-            <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
-              <div className="shrink-0">
-                <img
-                  src={MINISTERIO_MULHERES_LOGO}
-                  alt="Ministério das Mulheres"
-                  className="h-16 w-auto object-contain md:h-20"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
-                />
-                <p className="text-sm font-bold text-[var(--brand-dark-red)]">
-                  Ministério das Mulheres
-                </p>
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 text-[var(--accent)]">
-                  <Handshake className="h-5 w-5" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider">
-                    Parceria Federal — Projeto Brilho da Esmeralda
-                  </h3>
+          <div className="hidden">
+            {/* Bloco 4 — Parceria Federal (destaque) */}
+            <div className="mt-6 rounded-2xl border-2 border-[var(--accent)] bg-[var(--accent)]/5 p-6 md:p-8">
+              <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
+                <div className="shrink-0">
+                  <img
+                    src={MINISTERIO_MULHERES_LOGO}
+                    alt="Ministério das Mulheres"
+                    className="h-16 w-auto object-contain md:h-20"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                  <p className="text-sm font-bold text-[var(--brand-dark-red)]">
+                    Ministério das Mulheres
+                  </p>
                 </div>
-                <dl className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Instrumento
-                    </dt>
-                    <dd>Termo de Fomento nº 995692/2026</dd>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 text-[var(--accent)]">
+                    <Handshake className="h-5 w-5" />
+                    <h3 className="text-sm font-bold uppercase tracking-wider">
+                      Parceria Federal — Projeto Brilho da Esmeralda
+                    </h3>
                   </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Concedente
-                    </dt>
-                    <dd>Ministério das Mulheres — Secretaria Nacional de Autonomia Econômica</dd>
+                  <dl className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Instrumento
+                      </dt>
+                      <dd>Termo de Fomento nº 995692/2026</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Concedente
+                      </dt>
+                      <dd>Ministério das Mulheres — Secretaria Nacional de Autonomia Econômica</dd>
+                    </div>
+                    <div className="sm:col-span-2">
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Objeto
+                      </dt>
+                      <dd>
+                        Implantação e Desenvolvimento do Projeto Brilho da Esmeralda — cursos
+                        gratuitos de corte e costura para mulheres da comunidade
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Valor total
+                      </dt>
+                      <dd>R$ 100.000,00</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Vigência
+                      </dt>
+                      <dd>6 meses — assinado em 17/06/2026</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Processo SEI
+                      </dt>
+                      <dd>21260.000911/2026-93</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Emenda Parlamentar nº
+                      </dt>
+                      <dd>28260003</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Documento SEI
+                      </dt>
+                      <dd>62122718</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Representante da OSC
+                      </dt>
+                      <dd>Lindaci Alexandre Pereira — Presidente</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Representante do Ministério
+                      </dt>
+                      <dd>Joana Célia dos Passos — Secretária Nacional de Autonomia Econômica</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Liberação dos recursos
+                      </dt>
+                      <dd>Parcela única</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Ação orçamentária
+                      </dt>
+                      <dd>21GG — PTRES 262853 — Elemento 33.50.41</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Nota de empenho
+                      </dt>
+                      <dd>2026NE000050 — Fonte 1000000000</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Autenticidade
+                      </dt>
+                      <dd>Código verificador 62122718 — CRC F123FFB7</dd>
+                    </div>
+                  </dl>
+                  <a
+                    href={TERMO_FOMENTO_PDF}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
+                  >
+                    <FileText className="h-4 w-4" /> Ver Termo de Fomento completo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Documento integral — todas as 21 páginas e 22 cláusulas */}
+            <div className="mt-6 overflow-hidden rounded-2xl border bg-card shadow-sm">
+              <div className="flex flex-col gap-4 border-b p-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="flex items-center gap-2 text-[var(--accent)]">
+                    <FileText className="h-5 w-5" />
+                    <h3 className="text-sm font-bold uppercase tracking-wider">
+                      Termo de Fomento integral
+                    </h3>
                   </div>
-                  <div className="sm:col-span-2">
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Objeto
-                    </dt>
-                    <dd>
-                      Implantação e Desenvolvimento do Projeto Brilho da Esmeralda — cursos
-                      gratuitos de corte e costura para mulheres da comunidade
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Valor total
-                    </dt>
-                    <dd>R$ 100.000,00</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Vigência
-                    </dt>
-                    <dd>6 meses — assinado em 17/06/2026</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Processo SEI
-                    </dt>
-                    <dd>21260.000911/2026-93</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Emenda Parlamentar nº
-                    </dt>
-                    <dd>28260003</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Documento SEI
-                    </dt>
-                    <dd>62122718</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Representante da OSC
-                    </dt>
-                    <dd>Lindaci Alexandre Pereira — Presidente</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Representante do Ministério
-                    </dt>
-                    <dd>Joana Célia dos Passos — Secretária Nacional de Autonomia Econômica</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Liberação dos recursos
-                    </dt>
-                    <dd>Parcela única</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Ação orçamentária
-                    </dt>
-                    <dd>21GG — PTRES 262853 — Elemento 33.50.41</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Nota de empenho
-                    </dt>
-                    <dd>2026NE000050 — Fonte 1000000000</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Autenticidade
-                    </dt>
-                    <dd>Código verificador 62122718 — CRC F123FFB7</dd>
-                  </div>
-                </dl>
+                  <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground/75">
+                    Consulte abaixo as 21 páginas do documento oficial, incluindo as 22 cláusulas,
+                    obrigações das partes, monitoramento, prestação de contas, sanções, assinaturas
+                    e dados de autenticação.
+                  </p>
+                </div>
+                <a
+                  href={TERMO_FOMENTO_PDF}
+                  download
+                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-white"
+                >
+                  <Download className="h-4 w-4" /> Baixar PDF
+                </a>
+              </div>
+              <object
+                data={TERMO_FOMENTO_PDF}
+                type="application/pdf"
+                aria-label="Termo de Fomento nº 995692/2026 completo"
+                className="hidden h-[780px] w-full md:block"
+              >
+                <p className="p-6 text-sm">
+                  Seu navegador não exibiu o PDF.{" "}
+                  <a
+                    href={TERMO_FOMENTO_PDF}
+                    className="font-semibold text-[var(--accent)] underline"
+                  >
+                    Abra o documento completo.
+                  </a>
+                </p>
+              </object>
+              <div className="p-6 text-center md:hidden">
+                <p className="text-sm text-foreground/70">
+                  Em celulares, abra o documento em uma nova aba para consultar todas as páginas.
+                </p>
                 <a
                   href={TERMO_FOMENTO_PDF}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:brightness-110"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white"
                 >
-                  <FileText className="h-4 w-4" /> Ver Termo de Fomento completo
+                  <FileText className="h-4 w-4" /> Abrir documento completo
                 </a>
               </div>
             </div>
-          </div>
 
-          {/* Documento integral — todas as 21 páginas e 22 cláusulas */}
-          <div className="mt-6 overflow-hidden rounded-2xl border bg-card shadow-sm">
-            <div className="flex flex-col gap-4 border-b p-6 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <div className="flex items-center gap-2 text-[var(--accent)]">
-                  <FileText className="h-5 w-5" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider">
-                    Termo de Fomento integral
-                  </h3>
-                </div>
-                <p className="mt-2 max-w-3xl text-sm leading-relaxed text-foreground/75">
-                  Consulte abaixo as 21 páginas do documento oficial, incluindo as 22 cláusulas,
-                  obrigações das partes, monitoramento, prestação de contas, sanções, assinaturas e
-                  dados de autenticação.
-                </p>
+            {/* Bloco 5 — Relatórios */}
+            <div className="mx-auto mt-6 max-w-3xl rounded-2xl border bg-card p-6 text-center shadow-sm">
+              <div className="flex items-center justify-center gap-2 text-[var(--accent)]">
+                <ClipboardList className="h-5 w-5" />
+                <h3 className="text-sm font-bold uppercase tracking-wider">
+                  Relatórios de Execução
+                </h3>
               </div>
-              <a
-                href={TERMO_FOMENTO_PDF}
-                download
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-white"
-              >
-                <Download className="h-4 w-4" /> Baixar PDF
-              </a>
-            </div>
-            <object
-              data={TERMO_FOMENTO_PDF}
-              type="application/pdf"
-              aria-label="Termo de Fomento nº 995692/2026 completo"
-              className="hidden h-[780px] w-full md:block"
-            >
-              <p className="p-6 text-sm">
-                Seu navegador não exibiu o PDF.{" "}
-                <a
-                  href={TERMO_FOMENTO_PDF}
-                  className="font-semibold text-[var(--accent)] underline"
-                >
-                  Abra o documento completo.
-                </a>
+              <p className="mt-4 text-sm leading-relaxed text-foreground/80">
+                Os relatórios parciais e final de execução do objeto e financeiro serão publicados
+                aqui conforme apresentados ao Ministério das Mulheres na plataforma Transferegov.br.
               </p>
-            </object>
-            <div className="p-6 text-center md:hidden">
-              <p className="text-sm text-foreground/70">
-                Em celulares, abra o documento em uma nova aba para consultar todas as páginas.
+              <p className="mt-3 text-xs italic text-foreground/60">
+                Próxima entrega prevista: ao fim da vigência do Termo de Fomento (dezembro/2026).
               </p>
-              <a
-                href={TERMO_FOMENTO_PDF}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white"
-              >
-                <FileText className="h-4 w-4" /> Abrir documento completo
-              </a>
             </div>
-          </div>
-
-          {/* Bloco 5 — Relatórios */}
-          <div className="mx-auto mt-6 max-w-3xl rounded-2xl border bg-card p-6 text-center shadow-sm">
-            <div className="flex items-center justify-center gap-2 text-[var(--accent)]">
-              <ClipboardList className="h-5 w-5" />
-              <h3 className="text-sm font-bold uppercase tracking-wider">Relatórios de Execução</h3>
-            </div>
-            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-              Os relatórios parciais e final de execução do objeto e financeiro serão publicados
-              aqui conforme apresentados ao Ministério das Mulheres na plataforma Transferegov.br.
-            </p>
-            <p className="mt-3 text-xs italic text-foreground/60">
-              Próxima entrega prevista: ao fim da vigência do Termo de Fomento (dezembro/2026).
-            </p>
           </div>
         </div>
       </section>
