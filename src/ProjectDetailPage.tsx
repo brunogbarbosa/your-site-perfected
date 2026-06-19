@@ -100,7 +100,7 @@ const navLinks = [
   { href: "/#sobre", label: "Quem Somos" },
   { href: "/projetos-sociais", label: "Projetos Sociais" },
   { href: "/#cursos", label: "Cursos" },
-  { href: "/#transparencia", label: "Transparência" },
+  { href: "/transparencia-dos-projetos", label: "Transparência" },
   { href: "/#contato", label: "Contato" },
 ];
 
@@ -270,7 +270,7 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
         </section>
 
         {data.budget ? (
-          <section className="bg-secondary py-16 md:py-24">
+          <section id="planilha-orcamentaria" className="bg-secondary py-16 md:py-24">
             <div className="mx-auto max-w-6xl px-6">
               <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                 <div>

@@ -7,6 +7,7 @@ import {
   MapPin,
   MessageCircle,
   Phone,
+  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
@@ -51,7 +52,7 @@ const navLinks = [
   { href: "/#sobre", label: "Quem Somos" },
   { href: "/projetos-sociais", label: "Projetos Sociais" },
   { href: "/#cursos", label: "Cursos" },
-  { href: "/#transparencia", label: "Transparência" },
+  { href: "/transparencia-dos-projetos", label: "Transparência" },
   { href: "/#contato", label: "Contato" },
 ];
 
@@ -143,6 +144,32 @@ export default function ProjectsPage() {
                 transparência.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-[#173f72] py-16 text-white md:py-20">
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-7 px-6 text-center">
+            <span className="grid h-14 w-14 place-items-center rounded-full bg-white/10 ring-1 ring-white/20">
+              <ShieldCheck className="h-7 w-7 text-[var(--accent)]" />
+            </span>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">
+                Acesso público
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold uppercase md:text-4xl">
+                Transparência dos Projetos
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">
+                Consulte termos de fomento, planos de aplicação e informações de execução dos
+                projetos sociais da Casa de Seu Zé.
+              </p>
+            </div>
+            <a
+              href="/transparencia-dos-projetos"
+              className="inline-flex items-center gap-2 rounded-full border-4 border-black bg-white px-8 py-3 text-sm font-bold text-black transition hover:-translate-y-0.5 hover:shadow-xl"
+            >
+              Veja mais <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </section>
 
