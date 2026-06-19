@@ -102,19 +102,11 @@ export default function App() {
           {/* Logo / Fallback */}
           <div className="flex shrink-0 items-center justify-center">
             <img
-              src="https://www.gov.br/mulheres/pt-br/++theme++padrao_govbr/img/logo-mulheres.svg"
+              src={ministerioMulheres.url}
               alt="Ministério das Mulheres"
               height={40}
-              className="hidden h-10 md:block"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-                const fallback = e.currentTarget.parentElement?.querySelector(".fallback-text");
-                if (fallback) fallback.classList.remove("hidden");
-              }}
+              className="h-10 w-auto"
             />
-            <span className="fallback-text hidden text-sm font-bold" style={{ color: "#1a1a1a" }}>
-              Ministério das Mulheres
-            </span>
           </div>
 
           {/* Divisor */}
