@@ -31,6 +31,7 @@ const WHATSAPP =
 const navLinks = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "Quem Somos" },
+  { href: "/projetos-sociais", label: "Projetos Sociais" },
   { href: "#cursos", label: "Cursos" },
   { href: "#acoes", label: "Ações Sociais" },
   { href: "#galeria", label: "Galeria" },
@@ -95,36 +96,6 @@ export default function App() {
           </a>
         </div>
       </header>
-
-      {/* Banner Parceria Federal */}
-      <div className="border-b border-[#e0d9d0]" style={{ backgroundColor: "#F9F6F0" }}>
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-6 py-4 md:flex-row md:gap-6">
-          {/* Logo / Fallback */}
-          <div className="flex shrink-0 items-center justify-center">
-            <img
-              src={MINISTERIO_MULHERES_LOGO}
-              alt="Ministério das Mulheres"
-              height={80}
-              className="h-16 w-auto md:h-20"
-            />
-          </div>
-
-          {/* Divisor */}
-          <div className="hidden h-8 w-px bg-[#e0d9d0] md:block" />
-
-          {/* Texto */}
-          <p className="text-center text-sm leading-snug md:text-left" style={{ color: "#1a1a1a" }}>
-            <strong>Projeto Brilho da Esmeralda</strong> — realizado com recursos do Ministério das
-            Mulheres por meio do Termo de Fomento nº 995692/2026, decorrente de Emenda Parlamentar
-            nº 28260003.
-          </p>
-
-          {/* Badge */}
-          <span className="shrink-0 rounded-md bg-[var(--accent)] px-2.5 py-1 text-xs font-semibold text-white">
-            Parceria Federal · 2026
-          </span>
-        </div>
-      </div>
 
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
