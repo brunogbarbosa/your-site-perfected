@@ -1,6 +1,8 @@
 import {
   ArrowLeft,
   ArrowRight,
+  Building2,
+  CalendarClock,
   Download,
   FileSpreadsheet,
   FileText,
@@ -33,6 +35,20 @@ const projects = [
     term: "Termo de Fomento nº 995692/2026",
     value: "R$ 100.000,00",
     status: "Em execução",
+    partnership: {
+      osc: "Centro Cultural e Social Casa de Seu Zé",
+      cnpj: "18.181.775/0001-76",
+      amendment: "Emenda Parlamentar nº 28260003",
+      amendmentAuthor: "Deputada Federal Érika Kokay",
+      signatureDate: "17/06/2026",
+    },
+    accountability: {
+      status: "Parceria em execução — prestação de contas ainda não apresentada",
+      expectedDate: "Até 15/02/2027 (60 dias após o término previsto da vigência)",
+      submittedDate: "Ainda não apresentada",
+      analysisDeadline: "150 dias após o recebimento, prorrogável até o limite de 300 dias",
+      result: "Pendente — parceria em execução",
+    },
     documents: [
       {
         title: "Termo de Fomento nº 995692/2026",
@@ -67,6 +83,20 @@ const projects = [
     term: "Termo de Fomento nº 949053/2023",
     value: "R$ 1.000.000,00",
     status: "Executado",
+    partnership: {
+      osc: "Federação Habitacional do Sol Nascente",
+      cnpj: "03.635.287/0001-14",
+      amendment: "Emenda Parlamentar nº 41360008",
+      amendmentAuthor: "Senador Izalci Lucas",
+      signatureDate: "30/11/2023",
+    },
+    accountability: {
+      status: "Informação de andamento não disponibilizada nos documentos publicados",
+      expectedDate: "Até 28/02/2025, com possibilidade de prorrogação por até 30 dias",
+      submittedDate: "Não informada nos documentos publicados",
+      analysisDeadline: "150 dias após o recebimento, prorrogável até o limite de 300 dias",
+      result: "Não informado nos documentos publicados",
+    },
     documents: [
       {
         title: "Termo de Fomento nº 949053/2023",
@@ -208,39 +238,93 @@ export default function TransparencyProjectsPage() {
                     </div>
                   </div>
 
-                  <div className="p-7 md:p-10">
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
-                      Documentos disponíveis
-                    </span>
-                    <div className="mt-6 space-y-4">
-                      {project.documents.map((document) => {
-                        const Icon = document.icon;
-                        return (
-                          <a
-                            key={document.title}
-                            href={document.href}
-                            target={document.download ? "_blank" : undefined}
-                            rel={document.download ? "noreferrer" : undefined}
-                            className="group flex flex-col gap-4 rounded-2xl border p-5 transition hover:border-[var(--accent)] hover:bg-secondary/60 sm:flex-row sm:items-center"
+                  <div className="space-y-9 p-7 md:p-10">
+                    <section>
+                      <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                        <Building2 className="h-4 w-4" /> Dados da parceria
+                      </span>
+                      <dl className="mt-5 grid gap-4 rounded-2xl border bg-secondary/45 p-5 sm:grid-cols-2">
+                        {[
+                          ["Nome da OSC", project.partnership.osc],
+                          ["CNPJ", project.partnership.cnpj],
+                          ["Número da emenda", project.partnership.amendment],
+                          ["Autoria da emenda", project.partnership.amendmentAuthor],
+                          ["Data de assinatura", project.partnership.signatureDate],
+                        ].map(([label, value]) => (
+                          <div
+                            key={label}
+                            className={label === "Nome da OSC" ? "sm:col-span-2" : ""}
                           >
-                            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
-                              <Icon className="h-6 w-6" />
-                            </span>
-                            <span className="flex-1">
-                              <span className="block font-bold">{document.title}</span>
-                              <span className="mt-1 block text-sm leading-relaxed text-foreground/60">
-                                {document.description}
+                            <dt className="text-[11px] font-bold uppercase tracking-wider text-foreground/50">
+                              {label}
+                            </dt>
+                            <dd className="mt-1 text-sm font-semibold leading-relaxed">{value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </section>
+
+                    <section>
+                      <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                        <CalendarClock className="h-4 w-4" /> Situação da prestação de contas
+                      </span>
+                      <dl className="mt-5 divide-y rounded-2xl border bg-card px-5">
+                        {[
+                          ["Situação atual", project.accountability.status],
+                          ["Data prevista para apresentação", project.accountability.expectedDate],
+                          ["Data em que foi apresentada", project.accountability.submittedDate],
+                          ["Prazo para análise", project.accountability.analysisDeadline],
+                          ["Resultado conclusivo", project.accountability.result],
+                        ].map(([label, value]) => (
+                          <div
+                            key={label}
+                            className="py-4 sm:grid sm:grid-cols-[0.8fr,1.2fr] sm:gap-5"
+                          >
+                            <dt className="text-xs font-bold uppercase tracking-wide text-foreground/50">
+                              {label}
+                            </dt>
+                            <dd className="mt-1 text-sm font-medium leading-relaxed sm:mt-0">
+                              {value}
+                            </dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </section>
+
+                    <section>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                        Documentos disponíveis
+                      </span>
+                      <div className="mt-6 space-y-4">
+                        {project.documents.map((document) => {
+                          const Icon = document.icon;
+                          return (
+                            <a
+                              key={document.title}
+                              href={document.href}
+                              target={document.download ? "_blank" : undefined}
+                              rel={document.download ? "noreferrer" : undefined}
+                              className="group flex flex-col gap-4 rounded-2xl border p-5 transition hover:border-[var(--accent)] hover:bg-secondary/60 sm:flex-row sm:items-center"
+                            >
+                              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
+                                <Icon className="h-6 w-6" />
                               </span>
-                            </span>
-                            <span className="inline-flex items-center gap-2 text-sm font-bold text-[var(--brand-dark-red)]">
-                              {document.download ? <Download className="h-4 w-4" /> : null}
-                              {document.label}{" "}
-                              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                            </span>
-                          </a>
-                        );
-                      })}
-                    </div>
+                              <span className="flex-1">
+                                <span className="block font-bold">{document.title}</span>
+                                <span className="mt-1 block text-sm leading-relaxed text-foreground/60">
+                                  {document.description}
+                                </span>
+                              </span>
+                              <span className="inline-flex items-center gap-2 text-sm font-bold text-[var(--brand-dark-red)]">
+                                {document.download ? <Download className="h-4 w-4" /> : null}
+                                {document.label}{" "}
+                                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                              </span>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </section>
                   </div>
                 </div>
               </article>
