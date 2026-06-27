@@ -56,12 +56,12 @@ export default function App() {
             </span>
           </div>
           <a
-            href="https://instagram.com/"
+            href="https://instagram.com/oxumeoxala_"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-white/80 transition hover:text-white"
           >
-            <Instagram className="h-3.5 w-3.5" /> @casadeseuze
+            <Instagram className="h-3.5 w-3.5" /> @oxumeoxala_
           </a>
         </div>
       </div>
@@ -413,7 +413,7 @@ export default function App() {
                   <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Instagram
                   </dt>
-                  <dd>@casadeseuze</dd>
+                  <dd>@oxumeoxala_</dd>
                 </div>
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -689,7 +689,7 @@ export default function App() {
                 <Phone className="h-4 w-4 text-[var(--accent)]" /> (61) 99373-2273
               </li>
               <li className="flex items-center gap-2">
-                <Instagram className="h-4 w-4 text-[var(--accent)]" /> @casadeseuze
+                <Instagram className="h-4 w-4 text-[var(--accent)]" /> @oxumeoxala_
               </li>
             </ul>
           </div>
