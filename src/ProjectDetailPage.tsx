@@ -11,6 +11,9 @@ import {
   WalletCards,
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
+import editalRh from "@/assets/editais/edital-01-rh.pdf.asset.json";
+import editalLocacao from "@/assets/editais/edital-02-locacao.pdf.asset.json";
+import editalMateriais from "@/assets/editais/edital-03-materiais.pdf.asset.json";
 import MobileNav from "@/components/MobileNav";
 
 type ProjectKey = "esmeralda" | "sol";
@@ -121,7 +124,7 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
             </span>
           </div>
           <span className="flex items-center gap-2">
-            <Instagram className="h-3.5 w-3.5" /> @casadeseuze
+            <Instagram className="h-3.5 w-3.5" /> @oxumeoxala_
           </span>
         </div>
       </div>
@@ -265,6 +268,42 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
               >
                 <Download className="h-4 w-4" /> {data.documentLabel}
               </a>
+
+              {project === "esmeralda" ? (
+                <div className="mt-8 border-t border-white/10 pt-7">
+                  <span className="text-xs font-bold uppercase tracking-wider text-white/55">
+                    Editais do projeto
+                  </span>
+                  <div className="mt-4 space-y-3">
+                    {[
+                      {
+                        title: "Edital nº 01/2026 — Serviços de RH",
+                        url: editalRh.url,
+                      },
+                      {
+                        title: "Edital nº 02/2026 — Serviços de Locação",
+                        url: editalLocacao.url,
+                      },
+                      {
+                        title: "Edital nº 03/2026 — Aquisição de Materiais",
+                        url: editalMateriais.url,
+                      },
+                    ].map((edital) => (
+                      <a
+                        key={edital.title}
+                        href={edital.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/20"
+                      >
+                        <FileText className="h-4 w-4 shrink-0 text-[var(--accent)]" />
+                        <span className="flex-1 leading-snug">{edital.title}</span>
+                        <Download className="h-4 w-4 shrink-0 text-white/70" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </aside>
           </div>
         </section>

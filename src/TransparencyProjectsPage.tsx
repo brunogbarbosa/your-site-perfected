@@ -14,9 +14,6 @@ import {
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
-import editalRh from "@/assets/editais/edital-01-rh.pdf.asset.json";
-import editalLocacao from "@/assets/editais/edital-02-locacao.pdf.asset.json";
-import editalMateriais from "@/assets/editais/edital-03-materiais.pdf.asset.json";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -76,30 +73,6 @@ const projects = [
         label: "Ver projeto",
         icon: ShieldCheck,
         download: false,
-      },
-      {
-        title: "Edital nº 01/2026 — Contratação de Serviços de RH",
-        description: "Chamamento público para contratação de serviços de recursos humanos (assinado em 08/07/2026).",
-        href: editalRh.url,
-        label: "Baixar PDF",
-        icon: FileText,
-        download: true,
-      },
-      {
-        title: "Edital nº 02/2026 — Contratação de Serviços de Locação",
-        description: "Chamamento público para contratação de serviços de locação (assinado em 08/07/2026).",
-        href: editalLocacao.url,
-        label: "Baixar PDF",
-        icon: FileText,
-        download: true,
-      },
-      {
-        title: "Edital nº 03/2026 — Aquisição de Materiais",
-        description: "Chamamento público para aquisição de materiais e serviços (assinado em 08/07/2026).",
-        href: editalMateriais.url,
-        label: "Baixar PDF",
-        icon: FileText,
-        download: true,
       },
     ],
   },
