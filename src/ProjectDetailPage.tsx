@@ -124,7 +124,7 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
             </span>
           </div>
           <span className="flex items-center gap-2">
-            <Instagram className="h-3.5 w-3.5" /> @casadeseuze
+            <Instagram className="h-3.5 w-3.5" /> @oxumeoxala_
           </span>
         </div>
       </div>
