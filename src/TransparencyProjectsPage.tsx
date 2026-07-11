@@ -14,9 +14,6 @@ import {
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
-import editalRh from "@/assets/editais/edital-01-rh.pdf.asset.json";
-import editalLocacao from "@/assets/editais/edital-02-locacao.pdf.asset.json";
-import editalMateriais from "@/assets/editais/edital-03-materiais.pdf.asset.json";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
