@@ -11,6 +11,9 @@ import {
   WalletCards,
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
+import editalRh from "@/assets/editais/edital-01-rh.pdf.asset.json";
+import editalLocacao from "@/assets/editais/edital-02-locacao.pdf.asset.json";
+import editalMateriais from "@/assets/editais/edital-03-materiais.pdf.asset.json";
 import MobileNav from "@/components/MobileNav";
 
 type ProjectKey = "esmeralda" | "sol";
