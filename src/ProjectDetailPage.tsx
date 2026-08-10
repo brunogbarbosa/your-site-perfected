@@ -327,6 +327,44 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
         </section>
 
         {data.budget ? (
+          <section id="evento-lancamento" className="py-16 md:py-24">
+            <div className="mx-auto max-w-6xl px-6">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                <Camera className="h-4 w-4" /> Registro do evento
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold">
+                Lançamento de O Brilho da Esmeralda
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/65">
+                Momentos da cerimônia de abertura do projeto na Casa de Seu Zé, com a presença da
+                comunidade, lideranças e parceiros, além da estrutura preparada para as oficinas de
+                corte e costura.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {eventoEsmeralda.map((photo) => (
+                  <figure
+                    key={photo.src}
+                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
+                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
+                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
+                      }`}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {data.budget ? (
           <section id="planilha-orcamentaria" className="bg-secondary py-16 md:py-24">
             <div className="mx-auto max-w-6xl px-6">
               <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
