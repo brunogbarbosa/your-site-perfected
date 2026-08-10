@@ -103,6 +103,19 @@ export default function App() {
         </div>
       </header>
 
+      {/* Chamada — fotos do evento */}
+      <a
+        href="/projetos-sociais/brilho-da-esmeralda#evento-lancamento"
+        className="block bg-[var(--accent)] text-white transition hover:brightness-110"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 px-6 py-3 text-center text-sm font-semibold sm:flex-row">
+          <span>📸 Veja as fotos do lançamento do projeto O Brilho da Esmeralda</span>
+          <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-bold uppercase tracking-wider">
+            Ver galeria →
+          </span>
+        </div>
+      </a>
+
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
         <div className="absolute inset-0">
