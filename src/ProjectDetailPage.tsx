@@ -308,15 +308,15 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                     {[
                       {
                         title: "Edital nº 01/2026 — Serviços de RH",
-                        url: editalRh.url,
+                        url: "/editais/edital-01-rh.pdf",
                       },
                       {
                         title: "Edital nº 02/2026 — Serviços de Locação",
-                        url: editalLocacao.url,
+                        url: "/editais/edital-02-locacao.pdf",
                       },
                       {
                         title: "Edital nº 03/2026 — Aquisição de Materiais",
-                        url: editalMateriais.url,
+                        url: "/editais/edital-03-materiais.pdf",
                       },
                     ].map((edital) => (
                       <a
