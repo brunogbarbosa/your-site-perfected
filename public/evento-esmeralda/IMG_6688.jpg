@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>Casa de Seu Zé — Centro Cultural e Social | Ceilândia, DF</title>
+
+    <meta
+      name="description"
+      content="OSC comunitária em Ceilândia–DF. Cursos profissionalizantes gratuitos, ações culturais e apoio social para famílias."
+    />
+
+    <meta property="og:title" content="Casa de Seu Zé — Centro Cultural e Social" />
+
+    <meta
+      property="og:description"
+      content="Há mais de uma década transformando vidas através da educação e cultura em Ceilândia–DF."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:image"
+      content="https://casaseuzeosc.vercel.app/logo-nova.jpg"
+    />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta
+      property="og:url"
+      content="https://casaseuzeosc.vercel.app/"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:image"
+      content="https://casaseuzeosc.vercel.app/logo-nova.jpg"
+    />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx?t=1786335628510"></script>
+  </body>
+</html>
