@@ -401,6 +401,13 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                 <div className="rounded-2xl bg-[var(--brand-dark-red)] px-6 py-4 text-white">
                   <div className="text-xs uppercase tracking-wider text-white/55">Total geral</div>
                   <div className="mt-1 text-2xl font-extrabold">R$ 100.000,00</div>
+                  <a
+                    href="/planilha-orcamentaria-brilho-da-esmeralda.xlsx"
+                    download
+                    className="mt-3 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-bold transition hover:brightness-110"
+                  >
+                    <Download className="h-3.5 w-3.5" /> Baixar planilha (XLSX)
+                  </a>
                 </div>
               </div>
 
