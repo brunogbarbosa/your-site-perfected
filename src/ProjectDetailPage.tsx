@@ -229,6 +229,14 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
                   {data.summary}
                 </p>
+                {data.budget ? (
+                  <a
+                    href="#evento-lancamento"
+                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110"
+                  >
+                    <Camera className="h-4 w-4" /> Ver fotos do evento de lançamento
+                  </a>
+                ) : null}
               </div>
               <div className="overflow-hidden rounded-[2rem] border bg-white p-8 shadow-xl md:p-12">
                 <img
