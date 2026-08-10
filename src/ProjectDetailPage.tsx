@@ -12,26 +12,38 @@ import {
   Camera,
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
-import editalRh from "@/assets/editais/edital-01-rh.pdf.asset.json";
-import editalLocacao from "@/assets/editais/edital-02-locacao.pdf.asset.json";
-import editalMateriais from "@/assets/editais/edital-03-materiais.pdf.asset.json";
 import MobileNav from "@/components/MobileNav";
-import ev1 from "@/assets/evento-esmeralda/IMG_6779.jpg.asset.json";
-import ev2 from "@/assets/evento-esmeralda/IMG_6867.jpg.asset.json";
-import ev3 from "@/assets/evento-esmeralda/IMG_6884.jpg.asset.json";
-import ev4 from "@/assets/evento-esmeralda/IMG_6853.jpg.asset.json";
-import ev5 from "@/assets/evento-esmeralda/IMG_6734.jpg.asset.json";
-import ev6 from "@/assets/evento-esmeralda/IMG_6688.jpg.asset.json";
-import ev7 from "@/assets/evento-esmeralda/IMG_6901.jpg.asset.json";
 
 const eventoEsmeralda = [
-  { src: ev1.url, alt: "Público reunido na abertura do projeto O Brilho da Esmeralda", span: true },
-  { src: ev2.url, alt: "Autoridades e equipe durante a cerimônia de lançamento" },
-  { src: ev3.url, alt: "Lideranças comunitárias participando do evento" },
-  { src: ev4.url, alt: "Famílias da comunidade acompanhando a programação" },
-  { src: ev5.url, alt: "Apresentação de peça produzida na oficina de corte e costura" },
-  { src: ev6.url, alt: "Sala equipada com máquinas de costura para as aulas" },
-  { src: ev7.url, alt: "Mesa de confraternização preparada pela comunidade" },
+  {
+    src: "/evento-esmeralda/IMG_6779.jpg",
+    alt: "Público reunido na abertura do projeto O Brilho da Esmeralda",
+    span: true,
+  },
+  {
+    src: "/evento-esmeralda/IMG_6867.jpg",
+    alt: "Autoridades e equipe durante a cerimônia de lançamento",
+  },
+  {
+    src: "/evento-esmeralda/IMG_6884.jpg",
+    alt: "Lideranças comunitárias participando do evento",
+  },
+  {
+    src: "/evento-esmeralda/IMG_6853.jpg",
+    alt: "Famílias da comunidade acompanhando a programação",
+  },
+  {
+    src: "/evento-esmeralda/IMG_6734.jpg",
+    alt: "Apresentação de peça produzida na oficina de corte e costura",
+  },
+  {
+    src: "/evento-esmeralda/IMG_6688.jpg",
+    alt: "Sala equipada com máquinas de costura para as aulas",
+  },
+  {
+    src: "/evento-esmeralda/IMG_6901.jpg",
+    alt: "Mesa de confraternização preparada pela comunidade",
+  },
 ];
 
 type ProjectKey = "esmeralda" | "sol";
