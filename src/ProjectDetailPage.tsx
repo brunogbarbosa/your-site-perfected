@@ -77,6 +77,19 @@ const eventoEsmeralda = [
 
 type ProjectKey = "esmeralda" | "sol";
 
+const videosEsmeralda = [
+  {
+    src: "/evento-esmeralda/video-01.mp4",
+    poster: "/evento-esmeralda/video-01-poster.jpg",
+    label: "Oficina de corte e costura em atividade",
+  },
+  {
+    src: "/evento-esmeralda/video-02.mp4",
+    poster: "/evento-esmeralda/video-02-poster.jpg",
+    label: "Registro do lançamento do projeto",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
@@ -406,6 +419,28 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                         photo.span ? "h-72 md:h-[26rem]" : "h-64"
                       }`}
                     />
+                  </figure>
+                ))}
+              </div>
+
+              <h3 className="mt-14 text-xl font-extrabold">Vídeos do evento</h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {videosEsmeralda.map((video) => (
+                  <figure
+                    key={video.src}
+                    className="overflow-hidden rounded-2xl border bg-black shadow-sm"
+                  >
+                    <video
+                      src={video.src}
+                      poster={video.poster}
+                      controls
+                      playsInline
+                      preload="none"
+                      className="h-72 w-full object-contain md:h-96"
+                    />
+                    <figcaption className="bg-white px-4 py-3 text-sm text-foreground/70">
+                      {video.label}
+                    </figcaption>
                   </figure>
                 ))}
               </div>
