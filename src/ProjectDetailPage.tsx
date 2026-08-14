@@ -44,6 +44,35 @@ const eventoEsmeralda = [
     src: "/evento-esmeralda/IMG_6901.jpg",
     alt: "Mesa de confraternização preparada pela comunidade",
   },
+  {
+    src: "/evento-esmeralda/oficina-01.jpg",
+    alt: "Aluna costurando em máquina industrial durante a oficina",
+  },
+  {
+    src: "/evento-esmeralda/oficina-02.jpg",
+    alt: "Turma de corte e costura em atividade na sala de aula",
+  },
+  {
+    src: "/evento-esmeralda/oficina-05.jpg",
+    alt: "Foto da turma e da equipe do projeto O Brilho da Esmeralda",
+    span: true,
+  },
+  {
+    src: "/evento-esmeralda/oficina-06.jpg",
+    alt: "Professora orientando aluna na máquina de costura",
+  },
+  {
+    src: "/evento-esmeralda/oficina-07.jpg",
+    alt: "Participantes trabalhando sob o banner do projeto",
+  },
+  {
+    src: "/evento-esmeralda/oficina-04.jpg",
+    alt: "Equipe acompanhando a costura de uma participante",
+  },
+  {
+    src: "/evento-esmeralda/oficina-03.jpg",
+    alt: "Participantes reunidas na sala de apoio da Casa de Seu Zé",
+  },
 ];
 
 type ProjectKey = "esmeralda" | "sol";

@@ -105,7 +105,7 @@ export default function App() {
 
       {/* Chamada — fotos do evento */}
       <a
-        href="/projetos-sociais/brilho-da-esmeralda#evento-lancamento"
+        href="/brilho-da-esmeralda#evento-lancamento"
         className="block bg-[var(--accent)] text-white transition hover:brightness-110"
       >
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 px-6 py-3 text-center text-sm font-semibold sm:flex-row">

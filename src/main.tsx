@@ -13,7 +13,18 @@ const pages: Record<string, ComponentType> = {
   "/brilho-do-sol": () => <ProjectDetailPage project="sol" />,
 };
 
-const Page = pages[window.location.pathname] ?? App;
+const path = window.location.pathname.replace(/\/+$/, "") || "/";
+const normalized = path.replace(/^\/projetos-sociais(?=\/)/, "");
+const Page = pages[normalized] ?? pages[path] ?? App;
+
+if (window.location.hash) {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+  });
+}
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
