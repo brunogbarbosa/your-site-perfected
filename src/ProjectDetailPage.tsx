@@ -77,6 +77,19 @@ const eventoEsmeralda = [
 
 type ProjectKey = "esmeralda" | "sol";
 
+const videosEsmeralda = [
+  {
+    src: "/evento-esmeralda/video-01.mp4",
+    poster: "/evento-esmeralda/video-01-poster.jpg",
+    label: "Oficina de corte e costura em atividade",
+  },
+  {
+    src: "/evento-esmeralda/video-02.mp4",
+    poster: "/evento-esmeralda/video-02-poster.jpg",
+    label: "Registro do lançamento do projeto",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
