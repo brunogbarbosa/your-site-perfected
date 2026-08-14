@@ -422,6 +422,28 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                   </figure>
                 ))}
               </div>
+
+              <h3 className="mt-14 text-xl font-extrabold">Vídeos do evento</h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {videosEsmeralda.map((video) => (
+                  <figure
+                    key={video.src}
+                    className="overflow-hidden rounded-2xl border bg-black shadow-sm"
+                  >
+                    <video
+                      src={video.src}
+                      poster={video.poster}
+                      controls
+                      playsInline
+                      preload="none"
+                      className="h-72 w-full object-contain md:h-96"
+                    />
+                    <figcaption className="bg-white px-4 py-3 text-sm text-foreground/70">
+                      {video.label}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
             </div>
           </section>
         ) : null}
