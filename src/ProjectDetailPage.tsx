@@ -90,6 +90,47 @@ const videosEsmeralda = [
   },
 ];
 
+const turmaAFotos = [
+  {
+    src: "/turma-a/turma-01.jpg",
+    alt: "Turma A do projeto O Brilho da Esmeralda reunida na sala de corte e costura",
+    span: true,
+  },
+  {
+    src: "/turma-a/turma-02.jpg",
+    alt: "Aluna da Turma A exibindo peça costurada durante a aula",
+  },
+  {
+    src: "/turma-a/turma-03.jpg",
+    alt: "Alunas acompanhando demonstração na máquina de costura",
+  },
+  {
+    src: "/turma-a/turma-04.jpg",
+    alt: "Instrutora orientando aluna da Turma A na máquina Singer",
+  },
+  {
+    src: "/turma-a/turma-05.jpg",
+    alt: "Participantes da Turma A trabalhando em suas máquinas",
+  },
+  {
+    src: "/turma-a/turma-06.jpg",
+    alt: "Confraternização da Turma A na Casa de Seu Zé",
+  },
+];
+
+const turmaAVideos = [
+  {
+    src: "/turma-a/turma-video-01.mp4",
+    poster: "/turma-a/turma-video-01-poster.jpg",
+    label: "Turma A em atividade na oficina",
+  },
+  {
+    src: "/turma-a/turma-video-02.mp4",
+    poster: "/turma-a/turma-video-02-poster.jpg",
+    label: "Registro do dia a dia da Turma A",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
