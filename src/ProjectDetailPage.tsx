@@ -90,6 +90,47 @@ const videosEsmeralda = [
   },
 ];
 
+const turmaAFotos = [
+  {
+    src: "/turma-a/turma-01.jpg",
+    alt: "Turma A do projeto O Brilho da Esmeralda reunida na sala de corte e costura",
+    span: true,
+  },
+  {
+    src: "/turma-a/turma-02.jpg",
+    alt: "Aluna da Turma A exibindo peça costurada durante a aula",
+  },
+  {
+    src: "/turma-a/turma-03.jpg",
+    alt: "Alunas acompanhando demonstração na máquina de costura",
+  },
+  {
+    src: "/turma-a/turma-04.jpg",
+    alt: "Instrutora orientando aluna da Turma A na máquina Singer",
+  },
+  {
+    src: "/turma-a/turma-05.jpg",
+    alt: "Participantes da Turma A trabalhando em suas máquinas",
+  },
+  {
+    src: "/turma-a/turma-06.jpg",
+    alt: "Confraternização da Turma A na Casa de Seu Zé",
+  },
+];
+
+const turmaAVideos = [
+  {
+    src: "/turma-a/turma-video-01.mp4",
+    poster: "/turma-a/turma-video-01-poster.jpg",
+    label: "Turma A em atividade na oficina",
+  },
+  {
+    src: "/turma-a/turma-video-02.mp4",
+    poster: "/turma-a/turma-video-02-poster.jpg",
+    label: "Registro do dia a dia da Turma A",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
@@ -451,6 +492,65 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
             </div>
           </section>
         ) : null}
+
+        {data.budget ? (
+          <section id="turma-a" className="bg-secondary py-16 md:py-24">
+            <div className="mx-auto max-w-6xl px-6">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                <Camera className="h-4 w-4" /> Turmas
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold">Turma A — corte e costura</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/65">
+                Registros da primeira turma do projeto O Brilho da Esmeralda: aulas práticas,
+                acompanhamento das instrutoras e as primeiras peças produzidas pelas participantes.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {turmaAFotos.map((photo) => (
+                  <figure
+                    key={photo.src}
+                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
+                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
+                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
+                      }`}
+                    />
+                  </figure>
+                ))}
+              </div>
+
+              <h3 className="mt-14 text-xl font-extrabold">Vídeos da Turma A</h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {turmaAVideos.map((video) => (
+                  <figure
+                    key={video.src}
+                    className="overflow-hidden rounded-2xl border bg-black shadow-sm"
+                  >
+                    <video
+                      src={video.src}
+                      poster={video.poster}
+                      controls
+                      playsInline
+                      preload="none"
+                      className="h-72 w-full object-contain md:h-96"
+                    />
+                    <figcaption className="bg-white px-4 py-3 text-sm text-foreground/70">
+                      {video.label}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+
 
         {data.budget ? (
           <section id="planilha-orcamentaria" className="bg-secondary py-16 md:py-24">
