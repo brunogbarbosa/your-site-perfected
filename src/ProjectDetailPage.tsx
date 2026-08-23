@@ -368,6 +368,10 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                         title: "Edital nº 03/2026 — Aquisição de Materiais",
                         url: "/editais/edital-03-materiais.pdf",
                       },
+                      {
+                        title: "Edital Lindaci Alexandre Pereira — O Brilho da Esmeralda",
+                        url: "/editais/edital-lindaci.pdf",
+                      },
                     ].map((edital) => (
                       <a
                         key={edital.title}
