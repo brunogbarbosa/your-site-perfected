@@ -131,6 +131,46 @@ const turmaAVideos = [
   },
 ];
 
+const turmaBFotos = [
+  {
+    src: "/turma-b/turma-b-01.jpg",
+    alt: "Turma B em atividade na sala de corte e costura com banner do projeto O Brilho da Esmeralda",
+    span: true,
+  },
+  {
+    src: "/turma-b/turma-b-02.jpg",
+    alt: "Participantes da Turma B costurando em máquinas Singer e Siruba",
+  },
+  {
+    src: "/turma-b/turma-b-03.jpg",
+    alt: "Alunas da Turma B trabalhando na oficina de corte e costura",
+  },
+  {
+    src: "/turma-b/turma-b-04.jpg",
+    alt: "Instrutora demonstrando o uso da máquina industrial para a Turma B",
+  },
+  {
+    src: "/turma-b/turma-b-05.jpg",
+    alt: "Mesa de lanche preparada para as participantes da Turma B",
+  },
+  {
+    src: "/turma-b/turma-b-06.jpg",
+    alt: "Alunas da Turma B em suas máquinas durante a aula prática",
+  },
+  {
+    src: "/turma-b/turma-b-07.jpg",
+    alt: "Participantes da Turma B costurando peças em tecido",
+  },
+  {
+    src: "/turma-b/turma-b-08.jpg",
+    alt: "Aluna da Turma B finalizando peça à mão na oficina",
+  },
+  {
+    src: "/turma-b/turma-b-09.jpg",
+    alt: "Mesa de confraternização da Turma B na Casa de Seu Zé",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
@@ -550,6 +590,41 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
           </section>
         ) : null}
 
+        {data.budget ? (
+          <section id="turma-b" className="py-16 md:py-24">
+            <div className="mx-auto max-w-6xl px-6">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                <Camera className="h-4 w-4" /> Turmas
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold">Turma B — corte e costura</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/65">
+                Registros da segunda turma do projeto O Brilho da Esmeralda: aulas práticas na
+                oficina, acompanhamento das instrutoras e momentos de convivência entre as
+                participantes.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {turmaBFotos.map((photo) => (
+                  <figure
+                    key={photo.src}
+                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
+                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
+                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
+                      }`}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
 
         {data.budget ? (
