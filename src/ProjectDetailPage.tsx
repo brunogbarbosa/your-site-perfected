@@ -136,6 +136,7 @@ const turmaBFotos = [
     src: "/turma-b/turma-b-01.jpg",
     alt: "Turma B em atividade na sala de corte e costura com banner do projeto O Brilho da Esmeralda",
     span: true,
+    tall: true,
   },
   {
     src: "/turma-b/turma-b-02.jpg",
