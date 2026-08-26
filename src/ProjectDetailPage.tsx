@@ -131,6 +131,46 @@ const turmaAVideos = [
   },
 ];
 
+const turmaBFotos = [
+  {
+    src: "/turma-b/turma-b-01.jpg",
+    alt: "Turma B em atividade na sala de corte e costura com banner do projeto O Brilho da Esmeralda",
+    span: true,
+  },
+  {
+    src: "/turma-b/turma-b-02.jpg",
+    alt: "Participantes da Turma B costurando em máquinas Singer e Siruba",
+  },
+  {
+    src: "/turma-b/turma-b-03.jpg",
+    alt: "Alunas da Turma B trabalhando na oficina de corte e costura",
+  },
+  {
+    src: "/turma-b/turma-b-04.jpg",
+    alt: "Instrutora demonstrando o uso da máquina industrial para a Turma B",
+  },
+  {
+    src: "/turma-b/turma-b-05.jpg",
+    alt: "Mesa de lanche preparada para as participantes da Turma B",
+  },
+  {
+    src: "/turma-b/turma-b-06.jpg",
+    alt: "Alunas da Turma B em suas máquinas durante a aula prática",
+  },
+  {
+    src: "/turma-b/turma-b-07.jpg",
+    alt: "Participantes da Turma B costurando peças em tecido",
+  },
+  {
+    src: "/turma-b/turma-b-08.jpg",
+    alt: "Aluna da Turma B finalizando peça à mão na oficina",
+  },
+  {
+    src: "/turma-b/turma-b-09.jpg",
+    alt: "Mesa de confraternização da Turma B na Casa de Seu Zé",
+  },
+];
+
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
