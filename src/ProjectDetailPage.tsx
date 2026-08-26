@@ -590,6 +590,41 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
           </section>
         ) : null}
 
+        {data.budget ? (
+          <section id="turma-b" className="py-16 md:py-24">
+            <div className="mx-auto max-w-6xl px-6">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                <Camera className="h-4 w-4" /> Turmas
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold">Turma B — corte e costura</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/65">
+                Registros da segunda turma do projeto O Brilho da Esmeralda: aulas práticas na
+                oficina, acompanhamento das instrutoras e momentos de convivência entre as
+                participantes.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {turmaBFotos.map((photo) => (
+                  <figure
+                    key={photo.src}
+                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
+                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
+                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
+                      }`}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
 
         {data.budget ? (
