@@ -617,7 +617,11 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                       alt={photo.alt}
                       loading="lazy"
                       className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
-                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
+                        photo.tall
+                          ? "h-96 md:h-[40rem]"
+                          : photo.span
+                            ? "h-72 md:h-[26rem]"
+                            : "h-64"
                       }`}
                     />
                   </figure>
