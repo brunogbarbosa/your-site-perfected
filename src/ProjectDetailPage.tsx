@@ -16,19 +16,6 @@ import MobileNav from "@/components/MobileNav";
 
 const eventoEsmeralda = [
   {
-    src: "/evento-esmeralda/IMG_6779.jpg",
-    alt: "Público reunido na abertura do projeto O Brilho da Esmeralda",
-    span: true,
-  },
-  {
-    src: "/evento-esmeralda/IMG_6867.jpg",
-    alt: "Autoridades e equipe durante a cerimônia de lançamento",
-  },
-  {
-    src: "/evento-esmeralda/IMG_6884.jpg",
-    alt: "Lideranças comunitárias participando do evento",
-  },
-  {
     src: "/evento-esmeralda/IMG_6853.jpg",
     alt: "Famílias da comunidade acompanhando a programação",
   },
@@ -44,77 +31,18 @@ const eventoEsmeralda = [
     src: "/evento-esmeralda/IMG_6901.jpg",
     alt: "Mesa de confraternização preparada pela comunidade",
   },
-  {
-    src: "/evento-esmeralda/oficina-01.jpg",
-    alt: "Aluna costurando em máquina industrial durante a oficina",
-  },
-  {
-    src: "/evento-esmeralda/oficina-02.jpg",
-    alt: "Turma de corte e costura em atividade na sala de aula",
-  },
-  {
-    src: "/evento-esmeralda/oficina-05.jpg",
-    alt: "Foto da turma e da equipe do projeto O Brilho da Esmeralda",
-    span: true,
-  },
-  {
-    src: "/evento-esmeralda/oficina-06.jpg",
-    alt: "Professora orientando aluna na máquina de costura",
-  },
-  {
-    src: "/evento-esmeralda/oficina-07.jpg",
-    alt: "Participantes trabalhando sob o banner do projeto",
-  },
-  {
-    src: "/evento-esmeralda/oficina-04.jpg",
-    alt: "Equipe acompanhando a costura de uma participante",
-  },
-  {
-    src: "/evento-esmeralda/oficina-03.jpg",
-    alt: "Participantes reunidas na sala de apoio da Casa de Seu Zé",
-  },
 ];
 
 type ProjectKey = "esmeralda" | "sol";
 
-const videosEsmeralda = [
-  {
-    src: "/evento-esmeralda/video-01.mp4",
-    poster: "/evento-esmeralda/video-01-poster.jpg",
-    label: "Oficina de corte e costura em atividade",
-  },
-  {
-    src: "/evento-esmeralda/video-02.mp4",
-    poster: "/evento-esmeralda/video-02-poster.jpg",
-    label: "Registro do lançamento do projeto",
-  },
-];
-
 const turmaAFotos = [
-  {
-    src: "/turma-a/turma-01.jpg",
-    alt: "Turma A do projeto O Brilho da Esmeralda reunida na sala de corte e costura",
-    span: true,
-  },
   {
     src: "/turma-a/turma-02.jpg",
     alt: "Aluna da Turma A exibindo peça costurada durante a aula",
   },
   {
-    src: "/turma-a/turma-03.jpg",
-    alt: "Alunas acompanhando demonstração na máquina de costura",
-  },
-  {
-    src: "/turma-a/turma-04.jpg",
-    alt: "Instrutora orientando aluna da Turma A na máquina Singer",
-  },
-  {
     src: "/turma-a/turma-05.jpg",
     alt: "Participantes da Turma A trabalhando em suas máquinas",
-  },
-  {
-    src: "/turma-a/turma-06.jpg",
-    alt: "Confraternização da Turma A na Casa de Seu Zé",
   },
 ];
 
@@ -133,38 +61,12 @@ const turmaAVideos = [
 
 const turmaBFotos = [
   {
-    src: "/turma-b/turma-b-01.jpg",
-    alt: "Turma B em atividade na sala de corte e costura com banner do projeto O Brilho da Esmeralda",
-    span: true,
-    tall: true,
-  },
-  {
-    src: "/turma-b/turma-b-02.jpg",
-    alt: "Participantes da Turma B costurando em máquinas Singer e Siruba",
-  },
-  {
-    src: "/turma-b/turma-b-03.jpg",
-    alt: "Alunas da Turma B trabalhando na oficina de corte e costura",
-  },
-  {
     src: "/turma-b/turma-b-04.jpg",
     alt: "Instrutora demonstrando o uso da máquina industrial para a Turma B",
   },
   {
     src: "/turma-b/turma-b-05.jpg",
     alt: "Mesa de lanche preparada para as participantes da Turma B",
-  },
-  {
-    src: "/turma-b/turma-b-06.jpg",
-    alt: "Alunas da Turma B em suas máquinas durante a aula prática",
-  },
-  {
-    src: "/turma-b/turma-b-07.jpg",
-    alt: "Participantes da Turma B costurando peças em tecido",
-  },
-  {
-    src: "/turma-b/turma-b-08.jpg",
-    alt: "Aluna da Turma B finalizando peça à mão na oficina",
   },
   {
     src: "/turma-b/turma-b-09.jpg",
@@ -489,44 +391,18 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                 corte e costura.
               </p>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 {eventoEsmeralda.map((photo) => (
                   <figure
                     key={photo.src}
-                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
-                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
-                    }`}
+                    className="group overflow-hidden rounded-2xl border bg-white shadow-sm"
                   >
                     <img
                       src={photo.src}
                       alt={photo.alt}
                       loading="lazy"
-                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
-                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
-                      }`}
+                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
-                  </figure>
-                ))}
-              </div>
-
-              <h3 className="mt-14 text-xl font-extrabold">Vídeos do evento</h3>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {videosEsmeralda.map((video) => (
-                  <figure
-                    key={video.src}
-                    className="overflow-hidden rounded-2xl border bg-black shadow-sm"
-                  >
-                    <video
-                      src={video.src}
-                      poster={video.poster}
-                      controls
-                      playsInline
-                      preload="none"
-                      className="h-72 w-full object-contain md:h-96"
-                    />
-                    <figcaption className="bg-white px-4 py-3 text-sm text-foreground/70">
-                      {video.label}
-                    </figcaption>
                   </figure>
                 ))}
               </div>
@@ -546,21 +422,17 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                 acompanhamento das instrutoras e as primeiras peças produzidas pelas participantes.
               </p>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 {turmaAFotos.map((photo) => (
                   <figure
                     key={photo.src}
-                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
-                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
-                    }`}
+                    className="group overflow-hidden rounded-2xl border bg-white shadow-sm"
                   >
                     <img
                       src={photo.src}
                       alt={photo.alt}
                       loading="lazy"
-                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
-                        photo.span ? "h-72 md:h-[26rem]" : "h-64"
-                      }`}
+                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
                   </figure>
                 ))}
@@ -608,21 +480,13 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                 {turmaBFotos.map((photo) => (
                   <figure
                     key={photo.src}
-                    className={`group overflow-hidden rounded-2xl border bg-white shadow-sm ${
-                      photo.span ? "sm:col-span-2 lg:col-span-2" : ""
-                    }`}
+                    className="group overflow-hidden rounded-2xl border bg-white shadow-sm"
                   >
                     <img
                       src={photo.src}
                       alt={photo.alt}
                       loading="lazy"
-                      className={`w-full object-cover transition duration-500 group-hover:scale-[1.03] ${
-                        photo.tall
-                          ? "h-96 md:h-[40rem]"
-                          : photo.span
-                            ? "h-72 md:h-[26rem]"
-                            : "h-64"
-                      }`}
+                      className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
                   </figure>
                 ))}

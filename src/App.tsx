@@ -15,15 +15,10 @@ import {
 } from "lucide-react";
 import fachada from "@/assets/casa/fachada-BWDSsk2z.png";
 import g1 from "@/assets/casa/g1-CAW1w70p.png";
-import g2 from "@/assets/casa/g2-COA-Oybg.png";
-import g3 from "@/assets/casa/g3-DaIPNvfT.png";
-import g4 from "@/assets/casa/g4-Dd1Jwsn2.png";
 import g5 from "@/assets/casa/g5-yXjhplyL.png";
-import g6 from "@/assets/casa/g6-DVesCSHU.png";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
 
-const MINISTERIO_MULHERES_LOGO = "/ministerio-das-mulheres.png";
 const TERMO_FOMENTO_PDF = "/termo-de-fomento-995692-2026.pdf";
 
 const WHATSAPP =
@@ -251,17 +246,17 @@ export default function App() {
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {[
               {
-                img: g4,
+                img: "/turma-a/turma-05.jpg",
                 title: "Corte e Costura",
                 desc: "Cursos práticos que capacitam a comunidade para o mercado de trabalho e a geração de renda.",
               },
               {
-                img: g6,
+                img: g5,
                 title: "Beleza e Estética",
                 desc: "Oficinas de cabelo, unhas e estética que formam profissionais e fortalecem a autoestima.",
               },
               {
-                img: g3,
+                img: g1,
                 title: "Cultura e Ações Sociais",
                 desc: "Eventos, certificações e iniciativas que valorizam o protagonismo das famílias e a cultura local.",
               },
@@ -362,7 +357,14 @@ export default function App() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3">
-            {[g1, g2, g3, g4, g5, g6].map((img, i) => (
+            {[
+              g1,
+              g5,
+              "/turma-a/turma-02.jpg",
+              "/turma-a/turma-05.jpg",
+              "/turma-b/turma-b-04.jpg",
+              "/evento-esmeralda/IMG_6853.jpg",
+            ].map((img, i) => (
               <div
                 key={i}
                 className="group relative aspect-square overflow-hidden rounded-xl bg-muted"
@@ -475,14 +477,6 @@ export default function App() {
             <div className="mt-6 rounded-2xl border-2 border-[var(--accent)] bg-[var(--accent)]/5 p-6 md:p-8">
               <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
                 <div className="shrink-0">
-                  <img
-                    src={MINISTERIO_MULHERES_LOGO}
-                    alt="Ministério das Mulheres"
-                    className="h-16 w-auto object-contain md:h-20"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
                   <p className="text-sm font-bold text-[var(--brand-dark-red)]">
                     Ministério das Mulheres
                   </p>
