@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
+import MulheresDeAxeBudget from "@/components/MulheresDeAxeBudget";
+import { mulheresDeAxe } from "@/data/mulheresDeAxe";
 
 const eventoEsmeralda = [
   {
@@ -75,7 +77,7 @@ const eventoEsmeralda = [
   },
 ];
 
-type ProjectKey = "esmeralda" | "sol";
+type ProjectKey = "esmeralda" | "sol" | "axe";
 
 const turmaAFotos = [
   {
@@ -203,6 +205,7 @@ const budgetRows = [
 ];
 
 const projectData = {
+  axe: mulheresDeAxe,
   esmeralda: {
     name: "O Brilho da Esmeralda",
     logo: "/logo-brilho-da-esmeralda.png",
@@ -371,6 +374,20 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
               </h2>
               <p className="mt-6 text-base leading-8 text-foreground/75">{data.description}</p>
 
+              {project === "axe" ? (
+                <div className="mt-8">
+                  <h3 className="text-lg font-bold">Atividades previstas</h3>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {mulheresDeAxe.activities.map((activity) => (
+                      <div key={activity} className="flex items-start gap-3 rounded-xl bg-secondary p-4 text-sm">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" />
+                        {activity}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
               {project === "sol" ? (
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {[
@@ -417,6 +434,29 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
               >
                 <Download className="h-4 w-4" /> {data.documentLabel}
               </a>
+
+              {project === "axe" ? (
+                <div className="mt-8 border-t border-white/10 pt-7">
+                  <dl className="space-y-4 text-sm">
+                    {[
+                      ["Processo SEI", mulheresDeAxe.process],
+                      ["Emenda parlamentar", mulheresDeAxe.amendment],
+                      ["Assinatura", mulheresDeAxe.signatureDate],
+                    ].map(([label, value]) => (
+                      <div key={label}>
+                        <dt className="text-xs uppercase tracking-wider text-white/55">{label}</dt>
+                        <dd className="mt-1 leading-relaxed text-white/85">{value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <a href="#planilha-orcamentaria" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-white underline underline-offset-4">
+                    <WalletCards className="h-4 w-4" /> Ver remuneração prevista
+                  </a>
+                  <a href="/transparencia-dos-projetos#mulheres-de-axe" className="mt-4 block text-sm font-bold text-white underline underline-offset-4">
+                    Dados completos de transparência
+                  </a>
+                </div>
+              ) : null}
 
               {project === "esmeralda" ? (
                 <div className="mt-8 border-t border-white/10 pt-7">
@@ -665,6 +705,7 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
             </div>
           </section>
         ) : null}
+        {project === "axe" ? <MulheresDeAxeBudget /> : null}
       </main>
 
       <footer className="bg-[var(--brand-dark-red)] py-12 text-white">
