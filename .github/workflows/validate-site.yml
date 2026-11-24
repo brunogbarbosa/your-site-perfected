@@ -19,7 +19,8 @@ jobs:
       - name: TypeScript
         run: npx tsc --noEmit
       - name: Lint changed project components
-        run: npx eslint src/main.tsx src/ProjectsPage.tsx src/ProjectDetailPage.tsx src/TransparencyProjectsPage.tsx src/data/mulheresDeAxe.ts src/components/MulheresDeAxeBudget.tsx --rule 'prettier/prettier: off'
+        run: |
+          npx eslint src/main.tsx src/ProjectsPage.tsx src/ProjectDetailPage.tsx src/TransparencyProjectsPage.tsx src/data/mulheresDeAxe.ts src/components/MulheresDeAxeBudget.tsx --rule 'prettier/prettier: off'
       - name: Production build
         run: npm run build
       - name: Install visual verification tools remotely
