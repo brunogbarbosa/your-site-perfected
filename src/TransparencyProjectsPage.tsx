@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
+import { mulheresDeAxe } from "@/data/mulheresDeAxe";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
@@ -28,6 +29,58 @@ const navLinks = [
 ];
 
 const projects = [
+  {
+    id: "mulheres-de-axe",
+    name: mulheresDeAxe.name,
+    logo: mulheresDeAxe.logo,
+    logoAlt: mulheresDeAxe.logoAlt,
+    term: mulheresDeAxe.term,
+    value: mulheresDeAxe.value,
+    status: mulheresDeAxe.status,
+    partnership: {
+      osc: "Centro Cultural e Social Casa de Seu Zé",
+      cnpj: "18.181.775/0001-76",
+      amendment: mulheresDeAxe.amendment,
+      amendmentAuthor: "Não informada no termo disponibilizado",
+      signatureDate: mulheresDeAxe.signatureDate,
+      process: mulheresDeAxe.process,
+      partner: mulheresDeAxe.partner,
+      duration: mulheresDeAxe.period,
+    },
+    accountability: {
+      status: "Vigência de 7 meses a partir da assinatura em 18/11/2026",
+      expectedDate: "60 dias após o término da vigência, com possibilidade de prorrogação por até 30 dias, conforme o termo",
+      submittedDate: "Não informada nos documentos disponibilizados",
+      analysisDeadline: "150 dias após o recebimento, prorrogável até o limite de 300 dias, conforme o termo",
+      result: "Não informado nos documentos disponibilizados",
+    },
+    documents: [
+      {
+        title: mulheresDeAxe.term,
+        description: "Termo completo, com 21 páginas, assinado em 18/11/2026. Documento SEI nº 65936818.",
+        href: mulheresDeAxe.document,
+        label: "Baixar PDF",
+        icon: FileText,
+        download: true,
+      },
+      {
+        title: "Remuneração prevista da equipe",
+        description: "Quadro de equipe com 15 funções, unidades, quantidades e valores previstos. Contempla parte do orçamento do projeto.",
+        href: "/mulheres-de-axe#planilha-orcamentaria",
+        label: "Ver quadro",
+        icon: FileSpreadsheet,
+        download: false,
+      },
+      {
+        title: "Página do projeto",
+        description: "Objetivos, atividades previstas, vigência e informações da parceria.",
+        href: mulheresDeAxe.href,
+        label: "Ver projeto",
+        icon: ShieldCheck,
+        download: false,
+      },
+    ],
+  },
   {
     name: "O Brilho da Esmeralda",
     logo: "/logo-brilho-da-esmeralda.png",
@@ -211,6 +264,8 @@ export default function TransparencyProjectsPage() {
             {projects.map((project) => (
               <article
                 key={project.name}
+                id={project.id}
+                style={{ scrollMarginTop: "7rem" }}
                 className="overflow-hidden rounded-[2rem] border bg-card shadow-sm"
               >
                 <div className="grid lg:grid-cols-[0.72fr,1.28fr]">
@@ -250,6 +305,9 @@ export default function TransparencyProjectsPage() {
                           ["Número da emenda", project.partnership.amendment],
                           ["Autoria da emenda", project.partnership.amendmentAuthor],
                           ["Data de assinatura", project.partnership.signatureDate],
+                          ...(project.partnership.process ? [["Processo SEI", project.partnership.process]] : []),
+                          ...(project.partnership.partner ? [["Órgão parceiro", project.partnership.partner]] : []),
+                          ...(project.partnership.duration ? [["Vigência", project.partnership.duration]] : []),
                         ].map(([label, value]) => (
                           <div
                             key={label}

@@ -11,6 +11,7 @@ const pages: Record<string, ComponentType> = {
   "/transparencia-dos-projetos": TransparencyProjectsPage,
   "/brilho-da-esmeralda": () => <ProjectDetailPage project="esmeralda" />,
   "/brilho-do-sol": () => <ProjectDetailPage project="sol" />,
+  "/mulheres-de-axe": () => <ProjectDetailPage project="axe" />,
 };
 
 const path = window.location.pathname.replace(/\/+$/, "") || "/";

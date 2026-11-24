@@ -12,11 +12,25 @@ import {
 } from "lucide-react";
 import logo from "@/assets/casa/logo-BfpIqaN2.png";
 import MobileNav from "@/components/MobileNav";
+import { mulheresDeAxe } from "@/data/mulheresDeAxe";
 
 const WHATSAPP =
   "https://wa.me/5561993732273?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20de%20Seu%20Z%C3%A9%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
 const projects = [
+  {
+    title: mulheresDeAxe.name,
+    image: mulheresDeAxe.logo,
+    imageAlt: mulheresDeAxe.logoAlt,
+    status: mulheresDeAxe.status,
+    objective: mulheresDeAxe.summary,
+    term: mulheresDeAxe.term,
+    partner: mulheresDeAxe.partner,
+    value: mulheresDeAxe.value,
+    duration: "7 meses a partir da assinatura em 18/11/2026",
+    href: mulheresDeAxe.href,
+    action: "Ver mais",
+  },
   {
     title: "Brilho da Esmeralda",
     image: "/logo-brilho-da-esmeralda.png",
