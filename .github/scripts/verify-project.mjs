@@ -33,7 +33,7 @@ try {
       }
       if (path === "/mulheres-de-axe") {
         assert.equal(await page.locator("table tbody tr").count(), 15);
-        assert.equal((await page.locator("table tfoot").textContent()).replace(/\s+/g, " ").trim(), "Subtotal da equipe R$ 125.000,62");
+        assert.equal((await page.locator("table tfoot td").textContent()).trim(), "R$ 125.000,62");
         assert.equal(await page.locator("#evento-lancamento").count(), 0);
         assert.equal(await page.locator('a[href*="edital-"]').count(), 0);
         assert((await page.locator("main").textContent()).includes("21260.003177/2026-14"));
