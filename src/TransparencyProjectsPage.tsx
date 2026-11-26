@@ -41,7 +41,7 @@ const projects = [
       osc: "Centro Cultural e Social Casa de Seu Zé",
       cnpj: "18.181.775/0001-76",
       amendment: mulheresDeAxe.amendment,
-      amendmentAuthor: "Não informada no termo disponibilizado",
+      amendmentAuthor: mulheresDeAxe.amendmentAuthor,
       signatureDate: mulheresDeAxe.signatureDate,
       process: mulheresDeAxe.process,
       partner: mulheresDeAxe.partner,
@@ -49,7 +49,7 @@ const projects = [
     },
     accountability: {
       status: "Vigência de 7 meses a partir da assinatura em 18/11/2026",
-      expectedDate: "60 dias após o término da vigência, com possibilidade de prorrogação por até 30 dias, conforme o termo",
+      expectedDate: `Até ${mulheresDeAxe.accountabilityDeadline} (data limite para apresentação da prestação de contas)`,
       submittedDate: "Não informada nos documentos disponibilizados",
       analysisDeadline: "150 dias após o recebimento, prorrogável até o limite de 300 dias, conforme o termo",
       result: "Não informado nos documentos disponibilizados",

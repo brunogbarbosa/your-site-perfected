@@ -18,6 +18,8 @@ export const mulheresDeAxe = {
   href: "/mulheres-de-axe",
   process: "21260.003177/2026-14",
   amendment: "Emenda Parlamentar nº 41360007",
+  amendmentAuthor: "Senador Izalci Lucas",
+  accountabilityDeadline: "17/08/2027",
   signatureDate: "18/11/2026",
   budgetSource: "/quadro-remuneracao-mulheres-de-axe.jpg",
   activities: [

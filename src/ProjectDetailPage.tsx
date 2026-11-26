@@ -441,7 +441,9 @@ export default function ProjectDetailPage({ project }: { project: ProjectKey }) 
                     {[
                       ["Processo SEI", mulheresDeAxe.process],
                       ["Emenda parlamentar", mulheresDeAxe.amendment],
+                      ["Autoria da emenda", mulheresDeAxe.amendmentAuthor],
                       ["Assinatura", mulheresDeAxe.signatureDate],
+                      ["Data limite da prestação de contas", mulheresDeAxe.accountabilityDeadline],
                     ].map(([label, value]) => (
                       <div key={label}>
                         <dt className="text-xs uppercase tracking-wider text-white/55">{label}</dt>
